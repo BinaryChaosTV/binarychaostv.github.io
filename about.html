@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width">
     <title>ControlShiftEd - About Me</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="//code.jquery.com/jquery.min.js"></script>
   </head>
   <body>
     <header>
-       <h1>Welcome to ControlShiftEd</h1>
-       <nav>
-         <a href="https://controlshifted.github.io">Home</a>
-         <a href="https://controlshifted.github.io/notes">Notes</a>
-         <a href="https://controlshifted.github.io/SARndbox">SARndbox</a>
-         <a href="https://controlshifted.github.io/about">About</a>
-       </nav>
-     </header>
+      <h1>Welcome to ControlShiftEd</h1>
+      <div id = "navigation"></div>
+      <script>
+        $.get("nav.html", function(data){
+          $("#navigation").replaceWith(data);
+        });
+      </script>
+    </header>
     <main>
       <h2>About Me</h2>
       <p>I've always been interested in technology. In computers and
@@ -46,30 +47,27 @@
       code, I follow some online courses and create personal projects
       for myself, like this one.</p>
 
-      <p>ControlShiftEd is a passion project, an amalgamation
-      of side projects to make educators, and the general population,
-      more knowledgeable about computers, software development and
-      technological literacy. The goal is to share my knowledge, my
-      discoveries, and my tools with you. I hope this ripples into a
-      self-interest for you to learn about concepts yourself. I believe in the power of Free and Open
-      Source Software (FOSS) to get it done. What better
-      way to learn about something than when it's freely available to
-      use and explore? Grab a pen and paper, a notebook, open up your favourite text
-      editor, and let's learn together! 
+      <p>ControlShiftEd is a passion project, a portfolio, an amalgamation 
+      of side projects to document my own learning, and to share with everyone. 
+      The goal is to improve technological literacy for educators and the 
+      general population. I want to share my knowledge, my discoveries, and 
+      the tools I create. I hope, in turn, this ripples into a self-interest 
+      for others to learn themselves. I believe in the power of Free and Open 
+      Source Software (FOSS) to get it done. What better way to learn about 
+      something than when it's freely available to use and explore? Grab a 
+      pen and paper, a notebook, open up your favourite text editor, and let's 
+      learn together!</p>
 
-      <p>There are plenty of things I want to do and
-      show off down the pipeline. I hope I have the time and energy to
-      accomplish them all. In the meantime, feel free to peruse through
-      my notes and other projects I've developed!</p>
+      <p>There are plenty of things I want to do and show off down the pipeline. 
+      I hope I have the time and energy to accomplish them all. In the meantime, 
+      feel free to peruse through my notes and other projects I've developed!</p>
     </main>
-    <footer>
-       <div class="social">
-         <a href="https://twitter.com/ControlShiftEd">Twitter</a>
-         <a href="https://github.com/ControlShiftEd">Github</a>
-       </div>
-       </br>
-       &copy; 2022 ControlShiftEd. All Rights Reserved.
-     </footer>
+    <div id = "footer"></div>
+    <script>
+      $.get("footer.html", function(data){
+        $("#footer").replaceWith(data);
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
