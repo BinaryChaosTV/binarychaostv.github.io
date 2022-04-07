@@ -4,29 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Welcome to ControlShiftEd</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Jquery -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <header>
       <h1>Welcome to ControlShiftEd</h1>
-      <nav>
-        <a href="https://controlshifted.github.io">Home</a>
-        <a href="https://controlshifted.github.io/notes">Notes</a>
-        <a href="https://controlshifted.github.io/SARndbox">SARndbox</a>
-        <a href="https://controlshifted.github.io/about">About</a>
-      </nav>
+      <div id = "navigation"></div>
+      <script>
+        $.get("nav.html", function(data){
+          $("#navigation").replaceWith(data);
+        });
+      </script>
     </header>
     <main>
-      
     </main>
-    <footer>
-      <div class="social">
-        <a href="https://twitter.com/ControlShiftEd">Twitter</a>
-        <a href="https://github.com/ControlShiftEd">Github</a>
-      </div>
-      </br>
-      &copy; 2022 ControlShiftEd. All Rights Reserved.
-    </footer>
+    <div id = "footer"></div>
+      <script>
+        $.get("footer.html", function(data){
+          $("#footer").replaceWith(data);
+        });
+      </script>
     <script src="script.js"></script>
   </body>
 </html>

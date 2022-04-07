@@ -1,6 +1,6 @@
-* {
+/* * {
   // outline: red solid 2px;
-}
+} */
 
 body {
   display: flex;
@@ -46,23 +46,67 @@ main {
 }
 
 footer {
+  display: flex;
   width: 100%;
+  max-height: 150px;
   margin-top: auto;
   padding: 25px 0;
-  background: #383838;
-  text-align: center;
+  background: #2E2F2D;
   color: #fff;
 }
 
-.social {
-  margin: 0 25%;
-  padding-bottom: 20px;
-  border-bottom: #fff solid 1px;
+.footer-left {
+  display: inherit;
+  margin-left: 20px;
+  flex: 1.5;
+  border-right: 1px solid white;
 }
 
-footer .social > a {
+.footer-left > img {
+  margin: 0;
+  padding: 0 25px;
+  height: 100%;
+}
+
+.footer-left > p {
+  margin-right: 10px;
+}
+
+.footer-center {
+  flex: 2;
+}
+
+.footer-right {
+  position: relative;
+  text-align: center;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.footer-right > p {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+
+.social {
+    width: 100%;
+    bottom: 20%;
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: #fff solid 1px;
+}
+
+.social > a {
   color: #fff;
   text-decoration: underline;
   padding: 0 5px;
   text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .footer-left > p {
+    display: none;
+  }
 }
