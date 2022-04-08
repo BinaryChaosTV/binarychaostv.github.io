@@ -2,16 +2,24 @@
 <html>
   <head>
     <title>Welcome to ControlShiftEd</title>
-    <!--#include file="head.html" -->
+    <!-- Jquery -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script> 
+      $(function(){
+        $("head").load("head.html");
+        $("#nav").load("nav.html"); 
+        $("#footer").load("footer.html"); 
+      });
+      </script>
   </head>
   <body>
     <header>
       <h1>Welcome to ControlShiftEd</h1>
-      <!--#include file="nav.html" -->
+      <div id="nav"></div>
     </header>
     <main>
     </main>
-    <!--#include file="footer.html" -->
+    <div id="footer"></div>
     <script src="script.js"></script>
   </body>
 </html>
