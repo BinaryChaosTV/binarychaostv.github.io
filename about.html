@@ -2,21 +2,12 @@
 <html>
   <head>
     <title>ControlShiftEd - About Me</title>
-    <!-- Jquery -->
-    <script src="//code.jquery.com/jquery.min.js"></script>
-    <script>
-      $(function(){ $("head").load("head.html") });
-    </script>
+    <!--#include file="head.html" -->
   </head>
   <body>
     <header>
       <h1>Welcome to ControlShiftEd</h1>
-      <div id = "navigation"></div>
-      <script>
-        $.get("nav.html", function(data){
-          $("#navigation").replaceWith(data);
-        });
-      </script>
+      <!--#include file="nav.html" -->
     </header>
     <main>
       <h2>About Me</h2>
@@ -63,12 +54,7 @@
       I hope I have the time and energy to accomplish them all. In the meantime, 
       feel free to peruse through my notes and other projects I've developed!</p>
     </main>
-    <div id = "footer"></div>
-    <script>
-      $.get("footer.html", function(data){
-        $("#footer").replaceWith(data);
-      });
-    </script>
+    <!--#include file="footer.html" -->
     <script src="script.js"></script>
   </body>
 </html>
