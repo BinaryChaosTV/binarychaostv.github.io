@@ -5,4 +5,12 @@ import macrosPlugin from "vite-plugin-babel-macros";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), macrosPlugin()],
+  // Move the index.html to the src folder, and assets to their own folder in the PWD.
+  root: "src",
+
+  //Adjust build to create a new index.html in the PWD folder, and add newly created assets to dist.
+  build: {
+    outDir: "../",
+    assetsDir: "./dist",
+  },
 });
