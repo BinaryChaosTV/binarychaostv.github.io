@@ -1,0 +1,10 @@
+@mixin colorbar($name, $vertical, $horizontal) {
+  &::#{$name} {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    #{$vertical}: var(--v-offset);
+    #{$horizontal}: var(--h-offset);
+    @content;
+  }
+}

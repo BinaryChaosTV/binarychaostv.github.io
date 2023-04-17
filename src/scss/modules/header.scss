@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  padding: 1rem 2rem;
+}
+
+.nav {
+  margin-left: auto;
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+    font-weight: var(--fw-bold);
+  }
+
+  & a {
+    text-decoration: none;
+    color: var(--clr-text);
+  }
+}
+
+#theme-toggle {
+  width: 0;
+
+  & + label {
+    background: no-repeat url("../../assets/images/moon-solid.svg");
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &:focus-visible + label {
+    outline: var(--clr-text) auto 5px;
+  }
+}
+
+[data-theme="dark"] #theme-toggle + label {
+  background: no-repeat url("../../assets/images/sun-solid.svg");
+}

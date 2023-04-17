@@ -1,0 +1,5 @@
+@keyframes slide-right {
+  100% {
+    left: calc(var(--h-offset) + 3rem);
+  }
+}

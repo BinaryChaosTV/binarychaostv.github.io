@@ -1,0 +1,27 @@
+:root {
+  color-scheme: light dark;
+  // Primaries
+  --clr-background: hsl(60, 6%, 94%);
+  --clr-text: hsl(174, 17%, 12%);
+  --clr-accent-light: hsl(110, 38%, 56%);
+  --clr-accent: hsl(132, 55%, 40%);
+  --clr-complement: hsl(200, 100%, 34%);
+
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-headings: "Playfair Display", serif;
+
+  --fw-light: 300;
+  --fw-regular: 400
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  // 16px
+  --fs-default: 1rem;
+}
+
+[data-theme="dark"] {
+  --clr-text: hsl(60, 6%, 94%);
+  --clr-background: hsl(174, 17%, 12%);
+}
+

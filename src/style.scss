@@ -1,0 +1,70 @@
+/* @Imports */
+@use "scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Playfair+Display:wght@900&display=swap");
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-default);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.hero {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+
+  &__container {
+    display: grid;
+    grid-template: min-content / 0.4fr 0.6fr;
+    max-width: 60rem;
+    column-gap: 4rem;
+  }
+
+  &__title {
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-black);
+    font-size: 4rem;
+    line-height: 1.2;
+    white-space: pre-line;
+  }
+}
+
+.headshot {
+  --thickness: 1.5rem;
+  position: relative;
+  grid-row: 1 / span 2;
+
+  @include colorbar(before, top, left) {
+    --v-offset: -0.5rem;
+    --h-offset: -2rem;
+    width: 50%;
+    height: var(--thickness);
+    background-color: var(--clr-accent-light);
+    animation: slide-right 5s alternate infinite ease-in-out;
+  }
+
+  @include colorbar(after, bottom, right) {
+    --v-offset: -2rem;
+    --h-offset: -0.5rem;
+    width: var(--thickness);
+    height: 40%;
+    background-color: var(--clr-accent-light);
+  }
+}
+
+.stack {
+  display: flex;
+  gap: 1rem;
+}
+
+@include icon-colors(
+  "html5" rgb(240, 101, 41),
+  "css3" rgb(41, 101, 241),
+  "js" rgb(240, 219, 79),
+  "vuejs" rgb(66, 184, 131),
+  "sass" rgb(204, 102, 153),
+  "react" rgb(97, 219, 251)
+);
